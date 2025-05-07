@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>My Portfolio</title>
+  <link rel="stylesheet" href="css/style1.css" />
+  <link rel="stylesheet" href="css/animations1.css" />
+  <link rel="icon" href="icons/favicon.ico" type="image/x-icon" />
+</head>
+<body>
+  <!-- ====== Navigation Bar ====== -->
+  <header>
+    <nav class="navbar animate-on-scroll fade-in">
+      <div class="logo">MyPortfolio</div>
+      <ul class="nav-links">
+        <li><a href="about.html">About</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- ====== Hero Section ====== -->
+  <section class="hero animate-on-scroll fade-in">
+    <div class="hero-content">
+      <h1>Hello, I'm <span class="highlight">Alex Obwogi</span></h1>
+      <p>I build responsive websites & creative experiences.</p>
+      <a href="assets/Alex N. Obwogi_CV.pdf" download class="btn-resume">📄 Download My Resume (PDF)</a>
+    </div>
+    <div class="hero-image">
+      <img src="images/profile.jpg" alt="Profile picture" />
+    </div>
+  </section>
+
+  <!-- ====== About Section ====== -->
+  <section id="about" class="about animate-on-scroll slide-in">
+    <h2>About Me</h2>
+    <p>This is a brief intro about who you are, your skills, and your goals.</p>
+  </section>
+
+  <!-- ====== Projects Section ====== -->
+  <section id="projects" class="projects animate-on-scroll fade-in">
+    <h2>My Projects</h2>
+    <div class="project-card">
+      <img src="images/project1.png" alt="Project 1" />
+      <div class="project-info">
+        <h3>Project Title</h3>
+        <p>A short description of this project.</p>
+        <a href="projects/project1.html" class="btn btn-secondary">Read More</a>
+      </div>
+    </div>
+    <button class="filter-button" data-filter="all">All</button>
+    <button class="filter-button" data-filter="java">Java</button>
+    <button class="filter-button" data-filter="javascript">JavaScript</button>
+  </section>
+
+  <!-- ====== Contact Section ====== -->
+  <section id="contact" class="contact animate-on-scroll slide-in">
+    <h2>Contact Me</h2>
+    <form>
+      <input type="text" placeholder="Your Name" required />
+      <input type="email" placeholder="Your Email" required />
+      <textarea placeholder="Your Message" rows="5" required></textarea>
+      <button type="submit" class="btn btn-primary">Send Message</button>
+    </form>
+  </section>
+
+  <!-- ====== Footer ====== -->
+  <footer class="animate-on-scroll fade-in">
+    <p>© 2025 Alex Obwogi. All rights reserved.</p>
+  </footer>
+
+  <script src="js/script1.js">
+   
+  </script>
+</body>
+</html>
