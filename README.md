@@ -4,7 +4,7 @@ A fully responsive, animated, and modern personal portfolio website built with H
 
 ## 🚀 Live Demo
 
-Live Demo Link: https://alexobwogi.github.io/myPortfolio-website/
+[Click here to view my live portfolio](https://alexobwogi.github.io/myPortfolio-website/)
 
 
 ## 🎯 Features
