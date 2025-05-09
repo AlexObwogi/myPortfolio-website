@@ -1,0 +1,1132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Complete 24-Week Java Mastery Plan</title>
+    <style>
+        /* CSS Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Global Styles */
+        html {
+            font-size: 16px;
+        }
+
+        a {
+            text-decoration: none;
+            color: #3498db;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+    /* Base Styles */
+    body {
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        line-height: 1.6;
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 20px;
+        color: #333;
+        background-color: #f9f9f9;
+    }
+
+    /* Typography */
+    h1, h2, h3, h4 {
+        color: #2c3e50;
+        margin-top: 30px;
+        font-weight: 600;
+    }
+
+    h1 {
+        border-bottom: 3px solid #3498db;
+        padding-bottom: 10px;
+        margin-bottom: 30px;
+        font-size: 2.2rem;
+    }
+
+    h2 {
+        font-size: 1.8rem;
+        margin-top: 40px;
+        padding-bottom: 8px;
+    }
+
+    h3 {
+        font-size: 1.4rem;
+        margin-top: 20px;
+        margin-bottom: 15px;
+    }
+
+    p {
+        margin-bottom: 15px;
+    }
+
+    /* Week Container */
+    .week {
+        background-color: white;
+        border-radius: 10px;
+        padding: 20px;
+        margin-bottom: 30px;
+        box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .week:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+    }
+
+    /* Week Header */
+    .week-header {
+        background: linear-gradient(135deg, #3498db, #2c3e50);
+        color: white;
+        padding: 15px 20px;
+        border-radius: 8px;
+        margin: -20px -20px 20px -20px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .week-header h2 {
+        margin: 0;
+        color: white;
+        border-bottom: none;
+    }
+
+    /* Cards */
+    .project-card, .theory-card {
+        padding: 20px;
+        margin-bottom: 20px;
+        border-radius: 8px;
+        border-left: 5px solid;
+    }
+
+    .project-card {
+        background-color: #f0f8ff;
+        border-left-color: #2196f3;
+    }
+
+    .theory-card {
+        background-color: #f0fff4;
+        border-left-color: #4caf50;
+    }
+
+    /* Badges */
+    .time-badge {
+        display: inline-block;
+        padding: 5px 12px;
+        border-radius: 20px;
+        font-size: 0.85rem;
+        font-weight: bold;
+        margin-right: 10px;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+    }
+
+    .practical-badge {
+        background-color: #2196f3;
+        color: white;
+    }
+
+    .theory-badge {
+        background-color: #4caf50;
+        color: white;
+    }
+
+    /* Tech Stack */
+    .tech-stack {
+        font-size: 0.9rem;
+        color: #555;
+        margin: 10px 0;
+        font-style: italic;
+        display: flex;
+        align-items: center;
+    }
+
+    .tech-stack::before {
+        content: "🛠️";
+        margin-right: 8px;
+    }
+
+    .footer-note {
+        font-size: 0.8rem;
+        color: #ff0000;
+        margin-top: 20px;
+        text-align: center;
+        padding: 10px;
+        background-color: #8eeb9d;
+        font-size: larger;
+        display: inline-flex;
+        align-items: center;
+        width: 100%;
+    }
+
+    /* Git Tasks */
+    .git-task {
+        background-color: #f5f5f5;
+        padding: 4px 10px;
+        border-radius: 4px;
+        font-family: 'Courier New', monospace;
+        font-size: 0.85rem;
+        margin-right: 8px;
+        margin-bottom: 8px;
+        display: inline-block;
+        border: 1px solid #ddd;
+    }
+
+    /* Lists */
+    ul {
+        padding-left: 25px;
+        margin: 15px 0;
+    }
+
+    li {
+        margin-bottom: 10px;
+        position: relative;
+        line-height: 1.5;
+    }
+
+    li::before {
+        content: "•";
+        color: #3498db;
+        font-weight: bold;
+        display: inline-block;
+        width: 1em;
+        margin-left: -1em;
+    }
+
+    /* Complexity Indicator */
+    .complexity {
+        font-size: 0.9rem;
+        background-color: rgba(255,255,255,0.2);
+        padding: 4px 12px;
+        border-radius: 20px;
+        font-weight: 500;
+    }
+
+    /* Progress Overview */
+    .progression-overview {
+        background-color: white;
+        padding: 25px;
+        border-radius: 10px;
+        margin-top: 40px;
+        box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    }
+
+    .progression-overview h2 {
+        text-align: center;
+        margin-bottom: 25px;
+    }
+
+    .progression-overview ul {
+        columns: 2;
+        column-gap: 40px;
+    }
+
+    .progression-overview li {
+        break-inside: avoid;
+        margin-bottom: 15px;
+    }
+
+    /* Responsive Design */
+    @media (max-width: 768px) {
+        body {
+            padding: 15px;
+        }
+
+        .week {
+            padding: 15px;
+        }
+
+        .week-header {
+            flex-direction: column;
+            align-items: flex-start;
+        }
+
+        .complexity {
+            margin-top: 10px;
+            align-self: flex-start;
+        }
+
+        .progression-overview ul {
+            columns: 1;
+        }
+    }
+
+    /* Animations */
+    @keyframes fadeIn {
+        from { opacity: 0; transform: translateY(10px); }
+        to { opacity: 1; transform: translateY(0); }
+    }
+
+    .week {
+        animation: fadeIn 0.5s ease-out forwards;
+    }
+
+    /* Delay animations for each week */
+    .week:nth-child(1) { animation-delay: 0.1s; }
+    .week:nth-child(2) { animation-delay: 0.2s; }
+    .week:nth-child(3) { animation-delay: 0.3s; }
+    .week:nth-child(4) { animation-delay: 0.4s; }
+    .week:nth-child(5) { animation-delay: 0.5s; }
+    .week:nth-child(6) { animation-delay: 0.6s; }
+    .week:nth-child(7) { animation-delay: 0.7s; }
+    .week:nth-child(8) { animation-delay: 0.8s; }
+    .week:nth-child(9) { animation-delay: 0.9s; }
+    .week:nth-child(10) { animation-delay: 1.0s; }
+    .week:nth-child(11) { animation-delay: 1.1s; }
+    .week:nth-child(12) { animation-delay: 1.2s; }
+    .week:nth-child(13) { animation-delay: 1.3s; }
+    .week:nth-child(14) { animation-delay: 1.4s; }
+    .week:nth-child(15) { animation-delay: 1.5s; }
+    .week:nth-child(16) { animation-delay: 1.6s; }
+    .week:nth-child(17) { animation-delay: 1.7s; }
+    .week:nth-child(18) { animation-delay: 1.8s; }
+    .week:nth-child(19) { animation-delay: 1.9s; }
+    .week:nth-child(20) { animation-delay: 2.0s; }
+    .week:nth-child(21) { animation-delay: 2.1s; }
+    .week:nth-child(22) { animation-delay: 2.2s; }
+    .week:nth-child(23) { animation-delay: 2.3s; }
+    .week:nth-child(24) { animation-delay: 2.4s; }
+</style>
+</head>
+<body>
+    <h1>Complete 24-Week Java Mastery Plan</h1>
+    <p><strong>Structure:</strong> 1 project/week (24h practical) + 12h theory</p>
+
+    <!-- WEEK 1 -->
+    <div class="week">
+        <div class="week-header">
+            <h2>Week 1: Personal Finance Tracker</h2>
+            <div class="complexity">Beginner | CLI Application</div>
+        </div>
+        <div class="project-card">
+            <span class="time-badge practical-badge">24h Practical</span>
+            <h3>Project: Expense Manager</h3>
+            <div class="tech-stack">Tech: Java Collections, File I/O</div>
+            <ul>
+                <li>Add/remove expense entries</li>
+                <li>Calculate monthly totals</li>
+                <li>Save data to text file</li>
+                <li>Basic reporting by category</li>
+            </ul>
+            <p><strong>Git Tasks:</strong> 
+                <span class="git-task">init</span>
+                <span class="git-task">daily commits</span>
+                <span class="git-task">branching</span>
+            </p>
+        </div>
+        <div class="theory-card">
+            <span class="time-badge theory-badge">12h Theory</span>
+            <h3>Core Concepts</h3>
+            <ul>
+                <li>JVM architecture</li>
+                <li>Primitives vs Objects</li>
+                <li>Control structures</li>
+                <li>Basic memory management</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- WEEK 2 -->
+    <div class="week">
+        <div class="week-header">
+            <h2>Week 2: Gym Membership Manager</h2>
+            <div class="complexity">Beginner | CLI Application</div>
+        </div>
+        <div class="project-card">
+            <span class="time-badge practical-badge">24h Practical</span>
+            <h3>Project: Member Tracking System</h3>
+            <div class="tech-stack">Tech: Collections, Data Validation</div>
+            <ul>
+                <li>Member registration</li>
+                <li>Attendance tracking</li>
+                <li>Payment status validation</li>
+                <li>Basic reporting</li>
+            </ul>
+            <p><strong>Git Tasks:</strong> 
+                <span class="git-task">feature branches</span>
+                <span class="git-task">commit messages</span>
+                <span class="git-task">stashing</span>
+            </p>
+        </div>
+        <div class="theory-card">
+            <span class="time-badge theory-badge">12h Theory</span>
+            <h3>Object Basics</h3>
+            <ul>
+                <li>Class structure</li>
+                <li>Encapsulation</li>
+                <li>Method overloading</li>
+                <li>Static members</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- WEEK 3 -->
+    <div class="week">
+        <div class="week-header">
+            <h2>Week 3: Quiz Application</h2>
+            <div class="complexity">Beginner | CLI Application</div>
+        </div>
+        <div class="project-card">
+            <span class="time-badge practical-badge">24h Practical</span>
+            <h3>Project: Interactive Quiz System</h3>
+            <div class="tech-stack">Tech: Methods, File I/O</div>
+            <ul>
+                <li>Multiple question types</li>
+                <li>Score calculation</li>
+                <li>Timed quizzes</li>
+                <li>Result persistence</li>
+            </ul>
+            <p><strong>Git Tasks:</strong> 
+                <span class="git-task">pull requests</span>
+                <span class="git-task">.gitignore</span>
+                <span class="git-task">reverting</span>
+            </p>
+        </div>
+        <div class="theory-card">
+            <span class="time-badge theory-badge">12h Theory</span>
+            <h3>Methods & Debugging</h3>
+            <ul>
+                <li>Method signatures</li>
+                <li>Parameter passing</li>
+                <li>Recursion basics</li>
+                <li>Debugging techniques</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- WEEK 4 -->
+    <div class="week">
+        <div class="week-header">
+            <h2>Week 4: Contact Management System</h2>
+            <div class="complexity">Intermediate | OOP Application</div>
+        </div>
+        <div class="project-card">
+            <span class="time-badge practical-badge">24h Practical</span>
+            <h3>Project: Smart Address Book</h3>
+            <div class="tech-stack">Tech: OOP Principles, Collections</div>
+            <ul>
+                <li>CRUD operations</li>
+                <li>Search functionality</li>
+                <li>Contact grouping</li>
+                <li>Data validation</li>
+            </ul>
+            <p><strong>Git Tasks:</strong> 
+                <span class="git-task">merge conflicts</span>
+                <span class="git-task">blame</span>
+                <span class="git-task">log analysis</span>
+            </p>
+        </div>
+        <div class="theory-card">
+            <span class="time-badge theory-badge">12h Theory</span>
+            <h3>Advanced OOP</h3>
+            <ul>
+                <li>Inheritance vs Composition</li>
+                <li>SOLID principles</li>
+                <li>Exception handling</li>
+                <li>Unit testing basics</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- WEEK 5 -->
+    <div class="week">
+        <div class="week-header">
+            <h2>Week 5: Library Management System</h2>
+            <div class="complexity">Intermediate | OOP Application</div>
+        </div>
+        <div class="project-card">
+            <span class="time-badge practical-badge">24h Practical</span>
+            <h3>Project: Digital Library</h3>
+            <div class="tech-stack">Tech: Inheritance, Polymorphism</div>
+            <ul>
+                <li>Book/media inventory</li>
+                <li>Member checkouts</li>
+                <li>Late fee calculation</li>
+                <li>Reporting system</li>
+            </ul>
+            <p><strong>Git Tasks:</strong> 
+                <span class="git-task">branch protection</span>
+                <span class="git-task">code review</span>
+                <span class="git-task">tags</span>
+            </p>
+        </div>
+        <div class="theory-card">
+            <span class="time-badge theory-badge">12h Theory</span>
+            <h3>Polymorphism</h3>
+            <ul>
+                <li>Method overriding</li>
+                <li>Abstract classes</li>
+                <li>Interface implementation</li>
+                <li>Liskov principle</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- WEEK 6 -->
+    <div class="week">
+        <div class="week-header">
+            <h2>Week 6: E-Commerce Catalog</h2>
+            <div class="complexity">Intermediate | System Design</div>
+        </div>
+        <div class="project-card">
+            <span class="time-badge practical-badge">24h Practical</span>
+            <h3>Project: Product Management System</h3>
+            <div class="tech-stack">Tech: Interfaces, Polymorphism</div>
+            <ul>
+                <li>Product categories</li>
+                <li>Inventory tracking</li>
+                <li>Discount strategies</li>
+                <li>Search functionality</li>
+            </ul>
+            <p><strong>Git Tasks:</strong> 
+                <span class="git-task">releases</span>
+                <span class="git-task">CHANGELOG</span>
+                <span class="git-task">bisect</span>
+            </p>
+        </div>
+        <div class="theory-card">
+            <span class="time-badge theory-badge">12h Theory</span>
+            <h3>Design Patterns</h3>
+            <ul>
+                <li>Strategy pattern</li>
+                <li>Factory method</li>
+                <li>Observer pattern</li>
+                <li>Singleton pros/cons</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- WEEK 7 -->
+    <div class="week">
+        <div class="week-header">
+            <h2>Week 7: Banking Module</h2>
+            <div class="complexity">Intermediate | Financial System</div>
+        </div>
+        <div class="project-card">
+            <span class="time-badge practical-badge">24h Practical</span>
+            <h3>Project: Account Management System</h3>
+            <div class="tech-stack">Tech: Collections, Decimal Handling</div>
+            <ul>
+                <li>Account types</li>
+                <li>Transaction processing</li>
+                <li>Interest calculation</li>
+                <li>Balance reporting</li>
+            </ul>
+            <p><strong>Git Tasks:</strong> 
+                <span class="git-task">worktrees</span>
+                <span class="git-task">submodules</span>
+                <span class="git-task">hooks</span>
+            </p>
+        </div>
+        <div class="theory-card">
+            <span class="time-badge theory-badge">12h Theory</span>
+            <h3>Financial Programming</h3>
+            <ul>
+                <li>BigDecimal usage</li>
+                <li>Currency handling</li>
+                <li>Transaction integrity</li>
+                <li>Audit trails</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- WEEK 8 -->
+    <div class="week">
+        <div class="week-header">
+            <h2>Week 8: Payment Gateway Simulator</h2>
+            <div class="complexity">Intermediate | System Design</div>
+        </div>
+        <div class="project-card">
+            <span class="time-badge practical-badge">24h Practical</span>
+            <h3>Project: Payment Processing System</h3>
+            <div class="tech-stack">Tech: Interfaces, Polymorphism</div>
+            <ul>
+                <li>Payment method abstraction</li>
+                <li>Transaction states</li>
+                <li>Fraud detection basics</li>
+                <li>Receipt generation</li>
+            </ul>
+            <p><strong>Git Tasks:</strong> 
+                <span class="git-task">rebase</span>
+                <span class="git-task">cherry-pick</span>
+                <span class="git-task">patch</span>
+            </p>
+        </div>
+        <div class="theory-card">
+            <span class="time-badge theory-badge">12h Theory</span>
+            <h3>System Architecture</h3>
+            <ul>
+                <li>Layered architecture</li>
+                <li>Separation of concerns</li>
+                <li>API contracts</li>
+                <li>Logging strategies</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- WEEK 9 -->
+    <div class="week">
+        <div class="week-header">
+            <h2>Week 9: Inventory System</h2>
+            <div class="complexity">Intermediate | Collections</div>
+        </div>
+        <div class="project-card">
+            <span class="time-badge practical-badge">24h Practical</span>
+            <h3>Project: Warehouse Management</h3>
+            <div class="tech-stack">Tech: Stream API, Collections</div>
+            <ul>
+                <li>Product categorization</li>
+                <li>Stock level monitoring</li>
+                <li>Reorder alerts</li>
+                <li>Supplier tracking</li>
+            </ul>
+            <p><strong>Git Tasks:</strong> 
+                <span class="git-task">GitHub Issues</span>
+                <span class="git-task">project boards</span>
+                <span class="git-task">milestones</span>
+            </p>
+        </div>
+        <div class="theory-card">
+            <span class="time-badge theory-badge">12h Theory</span>
+            <h3>Stream API</h3>
+            <ul>
+                <li>Functional programming</li>
+                <li>map/filter/reduce</li>
+                <li>Collectors</li>
+                <li>Parallel streams</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- WEEK 10 -->
+    <div class="week">
+        <div class="week-header">
+            <h2>Week 10: Data Analysis Dashboard</h2>
+            <div class="complexity">Advanced | Data Processing</div>
+        </div>
+        <div class="project-card">
+            <span class="time-badge practical-badge">24h Practical</span>
+            <h3>Project: Sales Analytics Tool</h3>
+            <div class="tech-stack">Tech: Streams, Optional, DateTime</div>
+            <ul>
+                <li>CSV data import</li>
+                <li>Trend analysis</li>
+                <li>Visualization (ASCII)</li>
+                <li>Report generation</li>
+            </ul>
+            <p><strong>Git Tasks:</strong> 
+                <span class="git-task">GitHub Projects</span>
+                <span class="git-task">automation</span>
+                <span class="git-task">templates</span>
+            </p>
+        </div>
+        <div class="theory-card">
+            <span class="time-badge theory-badge">12h Theory</span>
+            <h3>Modern Java</h3>
+            <ul>
+                <li>Optional best practices</li>
+                <li>DateTime API</li>
+                <li>Records</li>
+                <li>Pattern matching</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- WEEK 11 -->
+    <div class="week">
+        <div class="week-header">
+            <h2>Week 11: Banking System</h2>
+            <div class="complexity">Advanced | Multithreading</div>
+        </div>
+        <div class="project-card">
+            <span class="time-badge practical-badge">24h Practical</span>
+            <h3>Project: Concurrent Transaction Processor</h3>
+            <div class="tech-stack">Tech: Threads, Synchronization</div>
+            <ul>
+                <li>Account management</li>
+                <li>Deposit/withdrawal with locks</li>
+                <li>Transaction history</li>
+                <li>Audit logging</li>
+            </ul>
+            <p><strong>Git Tasks:</strong> 
+                <span class="git-task">CODEOWNERS</span>
+                <span class="git-task">branch policies</span>
+                <span class="git-task">protected branches</span>
+            </p>
+        </div>
+        <div class="theory-card">
+            <span class="time-badge theory-badge">12h Theory</span>
+            <h3>Concurrency</h3>
+            <ul>
+                <li>Thread lifecycle</li>
+                <li>Race conditions</li>
+                <li>Deadlock prevention</li>
+                <li>Executor framework</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- WEEK 12 -->
+    <div class="week">
+        <div class="week-header">
+            <h2>Week 12: Ticket Booking System</h2>
+            <div class="complexity">Advanced | Concurrency</div>
+        </div>
+        <div class="project-card">
+            <span class="time-badge practical-badge">24h Practical</span>
+            <h3>Project: Event Booking Platform</h3>
+            <div class="tech-stack">Tech: Concurrency, Collections</div>
+            <ul>
+                <li>Seat allocation</li>
+                <li>Waitlist management</li>
+                <li>Payment timeout</li>
+                <li>Booking confirmation</li>
+            </ul>
+            <p><strong>Git Tasks:</strong> 
+                <span class="git-task">CI basics</span>
+                <span class="git-task">workflows</span>
+                <span class="git-task">artifacts</span>
+            </p>
+        </div>
+        <div class="theory-card">
+            <span class="time-badge theory-badge">12h Theory</span>
+            <h3>Advanced Concurrency</h3>
+            <ul>
+                <li>Concurrent collections</li>
+                <li>Atomic variables</li>
+                <li>Fork/Join framework</li>
+                <li>CompletableFuture</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- WEEK 13 -->
+    <div class="week">
+        <div class="week-header">
+            <h2>Week 13: Hospital Management</h2>
+            <div class="complexity">Advanced | Database Integration</div>
+        </div>
+        <div class="project-card">
+            <span class="time-badge practical-badge">24h Practical</span>
+            <h3>Project: Patient Records System</h3>
+            <div class="tech-stack">Tech: JDBC, SQLite</div>
+            <ul>
+                <li>Database schema design</li>
+                <li>CRUD operations</li>
+                <li>SQL injection prevention</li>
+                <li>Transaction management</li>
+            </ul>
+            <p><strong>Git Tasks:</strong> 
+                <span class="git-task">SQL migrations</span>
+                <span class="git-task">db/ directory</span>
+                <span class="git-task">pre-commit hooks</span>
+            </p>
+        </div>
+        <div class="theory-card">
+            <span class="time-badge theory-badge">12h Theory</span>
+            <h3>Database Concepts</h3>
+            <ul>
+                <li>ACID properties</li>
+                <li>Normalization</li>
+                <li>Indexing strategies</li>
+                <li>Connection pooling</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- WEEK 14 -->
+    <div class="week">
+        <div class="week-header">
+            <h2>Week 14: POS System</h2>
+            <div class="complexity">Advanced | JDBC Application</div>
+        </div>
+        <div class="project-card">
+            <span class="time-badge practical-badge">24h Practical</span>
+            <h3>Project: Retail Point of Sale</h3>
+            <div class="tech-stack">Tech: JDBC, Transactions</div>
+            <ul>
+                <li>Product catalog</li>
+                <li>Receipt generation</li>
+                <li>Inventory updates</li>
+                <li>Sales reporting</li>
+            </ul>
+            <p><strong>Git Tasks:</strong> 
+                <span class="git-task">database branching</span>
+                <span class="git-task">seed data</span>
+                <span class="git-task">rollback scripts</span>
+            </p>
+        </div>
+        <div class="theory-card">
+            <span class="time-badge theory-badge">12h Theory</span>
+            <h3>Advanced JDBC</h3>
+            <ul>
+                <li>Batch processing</li>
+                <li>Stored procedures</li>
+                <li>ResultSet handling</li>
+                <li>Connection management</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- WEEK 15 -->
+    <div class="week">
+        <div class="week-header">
+            <h2>Week 15: Library System Upgrade</h2>
+            <div class="complexity">Advanced | ORM</div>
+        </div>
+        <div class="project-card">
+            <span class="time-badge practical-badge">24h Practical</span>
+            <h3>Project: Hibernate Integration</h3>
+            <div class="tech-stack">Tech: Hibernate, JPA</div>
+            <ul>
+                <li>Entity mapping</li>
+                <li>Relationships</li>
+                <li>Query language</li>
+                <li>Caching strategies</li>
+            </ul>
+            <p><strong>Git Tasks:</strong> 
+                <span class="git-task">migration scripts</span>
+                <span class="git-task">schema updates</span>
+                <span class="git-task">flyway/liquibase</span>
+            </p>
+        </div>
+        <div class="theory-card">
+            <span class="time-badge theory-badge">12h Theory</span>
+            <h3>ORM Concepts</h3>
+            <ul>
+                <li>JPA annotations</li>
+                <li>Lazy loading</li>
+                <li>N+1 problem</li>
+                <li>Second-level cache</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- WEEK 16 -->
+    <div class="week">
+        <div class="week-header">
+            <h2>Week 16: School Management</h2>
+            <div class="complexity">Advanced | Database Design</div>
+        </div>
+        <div class="project-card">
+            <span class="time-badge practical-badge">24h Practical</span>
+            <h3>Project: Student Information System</h3>
+            <div class="tech-stack">Tech: Hibernate, Complex Relationships</div>
+            <ul>
+                <li>Course enrollment</li>
+                <li>Grade tracking</li>
+                <li>Attendance system</li>
+                <li>Reporting</li>
+            </ul>
+            <p><strong>Git Tasks:</strong> 
+                <span class="git-task">database diagrams</span>
+                <span class="git-task">ER modeling</span>
+                <span class="git-task">schema versioning</span>
+            </p>
+        </div>
+        <div class="theory-card">
+            <span class="time-badge theory-badge">12h Theory</span>
+            <h3>Database Design</h3>
+            <ul>
+                <li>Relationship types</li>
+                <li>Denormalization</li>
+                <li>Transaction isolation</li>
+                <li>Optimistic locking</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- WEEK 17 -->
+    <div class="week">
+        <div class="week-header">
+            <h2>Week 17: REST API Basics</h2>
+            <div class="complexity">Professional | Web Services</div>
+        </div>
+        <div class="project-card">
+            <span class="time-badge practical-badge">24h Practical</span>
+            <h3>Project: Bookstore API</h3>
+            <div class="tech-stack">Tech: Spring Boot, REST</div>
+            <ul>
+                <li>Resource endpoints</li>
+                <li>CRUD operations</li>
+                <li>Error handling</li>
+                <li>Basic documentation</li>
+            </ul>
+            <p><strong>Git Tasks:</strong> 
+                <span class="git-task">API versioning</span>
+                <span class="git-task">OpenAPI spec</span>
+                <span class="git-task">Postman collections</span>
+            </p>
+        </div>
+        <div class="theory-card">
+            <span class="time-badge theory-badge">12h Theory</span>
+            <h3>REST Fundamentals</h3>
+            <ul>
+                <li>HTTP methods</li>
+                <li>Status codes</li>
+                <li>HATEOAS</li>
+                <li>Content negotiation</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- WEEK 18 -->
+    <div class="week">
+        <div class="week-header">
+            <h2>Week 18: API Security</h2>
+            <div class="complexity">Professional | Authentication</div>
+        </div>
+        <div class="project-card">
+            <span class="time-badge practical-badge">24h Practical</span>
+            <h3>Project: Secure Auth Service</h3>
+            <div class="tech-stack">Tech: JWT, Spring Security</div>
+            <ul>
+                <li>User registration</li>
+                <li>JWT generation</li>
+                <li>Role-based access</li>
+                <li>Password encryption</li>
+            </ul>
+            <p><strong>Git Tasks:</strong> 
+                <span class="git-task">secret management</span>
+                <span class="git-task">environment variables</span>
+                <span class="git-task">security scanning</span>
+            </p>
+        </div>
+        <div class="theory-card">
+            <span class="time-badge theory-badge">12h Theory</span>
+            <h3>Security Concepts</h3>
+            <ul>
+                <li>OAuth2 flow</li>
+                <li>JWT structure</li>
+                <li>Password hashing</li>
+                <li>CSRF protection</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- WEEK 19 -->
+    <div class="week">
+        <div class="week-header">
+            <h2>Week 19: API Testing</h2>
+            <div class="complexity">Professional | Quality Assurance</div>
+        </div>
+        <div class="project-card">
+            <span class="time-badge practical-badge">24h Practical</span>
+            <h3>Project: Test Suite Implementation</h3>
+            <div class="tech-stack">Tech: JUnit, Mockito, TestContainers</div>
+            <ul>
+                <li>Unit tests</li>
+                <li>Integration tests</li>
+                <li>Mocking dependencies</li>
+                <li>Test coverage</li>
+            </ul>
+            <p><strong>Git Tasks:</strong> 
+                <span class="git-task">GitHub Actions</span>
+                <span class="git-task">test reports</span>
+                <span class="git-task">code coverage</span>
+            </p>
+        </div>
+        <div class="theory-card">
+            <span class="time-badge theory-badge">12h Theory</span>
+            <h3>Testing Strategies</h3>
+            <ul>
+                <li>Test pyramid</li>
+                <li>Mocking techniques</li>
+                <li>Test containers</li>
+                <li>Mutation testing</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- WEEK 20 -->
+    <div class="week">
+        <div class="week-header">
+            <h2>Week 20: REST API Service</h2>
+            <div class="complexity">Professional | Web Services</div>
+        </div>
+        <div class="project-card">
+            <span class="time-badge practical-badge">24h Practical</span>
+            <h3>Project: Library Management API</h3>
+            <div class="tech-stack">Tech: Spring Boot, Hibernate</div>
+            <ul>
+                <li>RESTful endpoints</li>
+                <li>JWT authentication</li>
+                <li>DTO pattern</li>
+                <li>Swagger documentation</li>
+            </ul>
+            <p><strong>Git Tasks:</strong> 
+                <span class="git-task">CI/CD pipeline</span>
+                <span class="git-task">artifact publishing</span>
+                <span class="git-task">release workflow</span>
+            </p>
+        </div>
+        <div class="theory-card">
+            <span class="time-badge theory-badge">12h Theory</span>
+            <h3>API Best Practices</h3>
+            <ul>
+                <li>Pagination</li>
+                <li>Filtering</li>
+                <li>Sorting</li>
+                <li>Versioning</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- WEEK 21 -->
+    <div class="week">
+        <div class="week-header">
+            <h2>Week 21: Frontend Basics</h2>
+            <div class="complexity">Professional | Web UI</div>
+        </div>
+        <div class="project-card">
+            <span class="time-badge practical-badge">24h Practical</span>
+            <h3>Project: Bookstore UI</h3>
+            <div class="tech-stack">Tech: HTML/CSS/JavaScript</div>
+            <ul>
+                <li>Basic page structure</li>
+                <li>API consumption</li>
+                <li>Form handling</li>
+                <li>DOM manipulation</li>
+            </ul>
+            <p><strong>Git Tasks:</strong> 
+                <span class="git-task">submodules</span>
+                <span class="git-task">static site hosting</span>
+                <span class="git-task">prettier</span>
+            </p>
+        </div>
+        <div class="theory-card">
+            <span class="time-badge theory-badge">12h Theory</span>
+            <h3>Web Fundamentals</h3>
+            <ul>
+                <li>HTML5 semantics</li>
+                <li>CSS Flexbox/Grid</li>
+                <li>DOM API</li>
+                <li>Fetch API</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- WEEK 22 -->
+    <div class="week">
+        <div class="week-header">
+            <h2>Week 22: React Integration</h2>
+            <div class="complexity">Professional | Frontend Framework</div>
+        </div>
+        <div class="project-card">
+            <span class="time-badge practical-badge">24h Practical</span>
+            <h3>Project: React Bookstore</h3>
+            <div class="tech-stack">Tech: React, Axios</div>
+            <ul>
+                <li>Component structure</li>
+                <li>State management</li>
+                <li>API integration</li>
+                <li>Routing</li>
+            </ul>
+            <p><strong>Git Tasks:</strong> 
+                <span class="git-task">React best practices</span>
+                <span class="git-task">package.json</span>
+                <span class="git-task">dependabot</span>
+            </p>
+        </div>
+        <div class="theory-card">
+            <span class="time-badge theory-badge">12h Theory</span>
+            <h3>React Concepts</h3>
+            <ul>
+                <li>Virtual DOM</li>
+                <li>Hooks</li>
+                <li>Context API</li>
+                <li>Component lifecycle</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- WEEK 23 -->
+    <div class="week">
+        <div class="week-header">
+            <h2>Week 23: Containerization</h2>
+            <div class="complexity">Professional | Deployment</div>
+        </div>
+        <div class="project-card">
+            <span class="time-badge practical-badge">24h Practical</span>
+            <h3>Project: Dockerized Application</h3>
+            <div class="tech-stack">Tech: Docker, Docker Compose</div>
+            <ul>
+                <li>Containerize backend</li>
+                <li>Containerize frontend</li>
+                <li>Database container</li>
+                <li>Compose setup</li>
+            </ul>
+            <p><strong>Git Tasks:</strong> 
+                <span class="git-task">Dockerfiles</span>
+                <span class="git-task">.dockerignore</span>
+                <span class="git-task">image scanning</span>
+            </p>
+        </div>
+        <div class="theory-card">
+            <span class="time-badge theory-badge">12h Theory</span>
+            <h3>Container Concepts</h3>
+            <ul>
+                <li>Images vs containers</li>
+                <li>Layered filesystem</li>
+                <li>Port mapping</li>
+                <li>Volume mounts</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- WEEK 24 -->
+    <div class="week">
+        <div class="week-header">
+            <h2>Week 24: Cloud Deployment</h2>
+            <div class="complexity">Professional | Production</div>
+        </div>
+        <div class="project-card">
+            <span class="time-badge practical-badge">24h Practical</span>
+            <h3>Project: AWS Deployment</h3>
+            <div class="tech-stack">Tech: AWS EC2, RDS</div>
+            <ul>
+                <li>Infrastructure setup</li>
+                <li>CI/CD pipeline</li>
+                <li>Monitoring</li>
+                <li>Backup strategy</li>
+            </ul>
+            <p><strong>Git Tasks:</strong> 
+                <span class="git-task">Infrastructure as Code</span>
+                <span class="git-task">deployment scripts</span>
+                <span class="git-task">rollback plans</span>
+            </p>
+        </div>
+        <div class="theory-card">
+            <span class="time-badge theory-badge">12h Theory</span>
+            <h3>Production Readiness</h3>
+            <ul>
+                <li>Monitoring</li>
+                <li>Logging strategies</li>
+                <li>Performance tuning</li>
+                <li>Security best practices</li>
+            </ul>
+        </div>
+    </div>
+
+    <h2>Complete Progression Overview</h2>
+    <ul>
+        <li><strong>Weeks 1-3:</strong> CLI Fundamentals</li>
+        <li><strong>Weeks 4-6:</strong> OOP Mastery</li>
+        <li><strong>Weeks 7-9:</strong> Advanced Java Features</li>
+        <li><strong>Weeks 10-12:</strong> Concurrency</li>
+        <li><strong>Weeks 13-16:</strong> Database Integration</li>
+        <li><strong>Weeks 17-20:</strong> Web Services</li>
+        <li><strong>Weeks 21-22:</strong> Frontend Integration</li>
+        <li><strong>Weeks 23-24:</strong> Deployment</li>
+    </ul>
+    <span class="footer-note"><strong> In GOD we trust.</strong></span>
+</body>
+</html>
