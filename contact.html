@@ -3,13 +3,19 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Contact Me</title>
+  <title>Contact | Alex Obwogi</title>
+  <meta name="description" content="Reach out to Alex Obwogi — whether you have a project in mind, a question, or just want to say hi." />
   <link rel="stylesheet" href="css/style.css" />
   <link rel="stylesheet" href="css/animations.css" />
+  <link rel="icon" href="icons/favicon.ico" type="image/x-icon" />
 </head>
 <body>
-  <header class="navbar">
-    <nav>
+
+  <!-- ====== Header / Navigation ====== -->
+  <header>
+    <nav class="navbar animate-on-scroll fade-in">
+      <div class="logo">Alex Obwogi</div>
+      <div id="mobile-menu-icon" class="menu-icon">☰</div>
       <ul class="nav-links">
         <li><a href="index.html">Home</a></li>
         <li><a href="about.html">About</a></li>
@@ -18,31 +24,37 @@
     </nav>
   </header>
 
-  <main class="contact-container fade-in">
-    <section class="contact-info">
-      <h1>📬 Get in Touch</h1>
-      <p>Feel free to reach out via the form below. Whether it's a collaboration or a question — I'm always happy to connect!</p>
+  <!-- ====== Contact Section ====== -->
+  <main>
+    <section class="contact animate-on-scroll slide-in">
+      <h1>📬 Let's Connect</h1>
+      <p>I’m always open to meaningful conversations, collaborations, and new opportunities. Use the form below to reach out — whether it's a question, an idea, or just a quick hello.</p>
+
+      <form class="contact-form" id="contact-form" action="#" method="post">
+        <label for="name">Full Name</label>
+        <input type="text" id="name" name="name" placeholder="Your Name" required />
+
+        <label for="email">Email Address</label>
+        <input type="email" id="email" name="email" placeholder="your@email.com" required />
+
+        <label for="message">Your Message</label>
+        <textarea id="message" name="message" rows="5" placeholder="Write your message here..." required></textarea>
+
+        <button type="submit" class="btn btn-primary">Send Message</button>
+      </form>
     </section>
 
-    <section class="contact-form">
-      <form>
-        <label for="name">Your Name</label>
-        <input type="text" id="name" name="name" required />
-
-        <label for="email">Your Email</label>
-        <input type="email" id="email" name="email" required />
-
-        <label for="message">Message</label>
-        <textarea id="message" name="message" rows="5" required></textarea>
-
-        <button type="submit">Send Message</button>
-      </form>
+    <!-- ====== Resume Button (Optional) ====== -->
+    <section class="resume-section animate-on-scroll fade-in">
+      <a href="assets/Alex N. Obwogi_CV.pdf" download class="btn-resume">📄 Download My Resume (PDF)</a>
     </section>
   </main>
 
-  <footer>
-    <p>&copy; Alex Obwogi. All rights reserved.</p>
+  <!-- ====== Footer ====== -->
+  <footer class="animate-on-scroll fade-in">
+    <p>&copy; 2025 Alex Obwogi. All rights reserved.</p>
   </footer>
+  <button id="scroll-to-top" title="Back to Top">↑</button>
 
   <script src="js/script.js"></script>
 </body>

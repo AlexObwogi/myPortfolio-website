@@ -3,13 +3,19 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>About Me</title>
+  <title>About | Alex Obwogi</title>
+  <meta name="description" content="About Alex Obwogi — a passionate developer who crafts modern, responsive digital experiences with Java, JavaScript, and a people-first mindset." />
   <link rel="stylesheet" href="css/style.css" />
   <link rel="stylesheet" href="css/animations.css" />
+  <link rel="icon" href="icons/favicon.ico" type="image/x-icon" />
 </head>
 <body>
-  <header class="navbar">
-    <nav>
+
+  <!-- ====== Header / Navigation ====== -->
+  <header>
+    <nav class="navbar animate-on-scroll fade-in">
+      <div class="logo">Alex Obwogi</div>
+      <div id="mobile-menu-icon" class="menu-icon">☰</div>
       <ul class="nav-links">
         <li><a href="index.html">Home</a></li>
         <li><a href="about.html" class="active">About</a></li>
@@ -18,44 +24,85 @@
     </nav>
   </header>
 
-  <main class="about-container fade-in">
-    <section class="intro">
+  <!-- ====== About Section ====== -->
+  <main>
+    <section class="about animate-on-scroll slide-in">
       <h1>👋 About Me</h1>
-      <p>Hi! I'm a passionate and motivated computer science student, graduating in 2026. I'm currently diving deep into Java, its frameworks, and modern front-end development with JavaScript, HTML, and CSS.</p>
+      <p>I’m <strong>Alex Obwogi</strong>, a passionate web developer and computer science student focused on building digital experiences that are elegant, intuitive, and human-centered.</p>
+
+      <p>My journey began with curiosity and a love for tech. Today, I blend creativity and logic to design interfaces that not only look good—but feel right. Whether it's Java, JavaScript, or responsive design, I approach every line of code with intent and care.</p>
+
+      <p>Outside the code, I'm driven by collaboration, learning, and sharing. If you're here to explore, team up, or just say hi—welcome. Let’s build something that matters.</p>
     </section>
 
-    <section class="skills">
+    <!-- ====== Profile Photo ====== -->
+    <section class="profile-photo animate-on-scroll fade-in">
+      <img src="images/profile2.png" alt="Alex Obwogi profile photo" />
+      <p class="caption">Nice to meet you — I’m Alex 👋</p>
+    </section>
+
+    <!-- ====== Skills Section ====== -->
+    <section class="skills animate-on-scroll fade-in">
       <h2>🛠 Skills</h2>
       <ul>
         <li>Java (Core, OOP, JDBC)</li>
-        <li>Spring Boot (currently learning)</li>
+        <li>Spring Boot (learning)</li>
         <li>JavaScript (ES6+), DOM manipulation</li>
         <li>HTML5, CSS3, Responsive Design</li>
         <li>Git & GitHub</li>
       </ul>
     </section>
 
-    <section class="education">
+    <!-- ====== Education Section ====== -->
+    <section class="education animate-on-scroll slide-in">
       <h2>🎓 Education</h2>
-      <p>Bachelor's in Computer Science (Expected 2026)</p>
-      <p>Actively building projects to strengthen my skills and practical knowledge.</p>
+      <p><strong>Bachelor’s in Computer Science</strong> (Expected 2026)</p>
+      <p>Actively building projects to apply theory into real-world development.</p>
     </section>
 
-    <section class="goals">
+    <!-- ====== Belief / Values Section ====== -->
+    <section class="values animate-on-scroll fade-in">
+      <h2>💡 What I Believe</h2>
+      <p>Great software is about people—not just code. I believe in creating inclusive, accessible, and thoughtful digital solutions that solve real problems and bring joy to users. I code with care, design with empathy, and build with purpose.</p>
+    </section>
+
+    <!-- ====== Career Goals Section ====== -->
+    <section class="goals animate-on-scroll slide-in">
       <h2>🚀 My Goals</h2>
       <ul>
-        <li>Build real-world projects with Java and JavaScript</li>
-        <li>Contribute to open-source communities</li>
-        <li>Master full-stack development</li>
-        <li>Land a software engineering internship by 2025</li>
+        <li>Build production-grade apps with Java & JavaScript</li>
+        <li>Contribute meaningfully to open-source projects</li>
+        <li>Master full-stack development and cloud tools</li>
+        <li>Secure a software engineering internship by 2025</li>
       </ul>
     </section>
+
+    <!-- ====== Timeline (Optional Showcase) ====== -->
+    <section class="timeline animate-on-scroll fade-in">
+      <h2>📌 Journey Highlights</h2>
+      <ul>
+        <li><strong>2023</strong> – Began web development journey</li>
+        <li><strong>2024</strong> – Built first portfolio site & team projects</li>
+        <li><strong>2025</strong> – Applying for internships & contributing to GitHub</li>
+        <li><strong>2026</strong> – Graduation 🎓</li>
+      </ul>
+    </section>
+
+    <!-- ====== Resume Download ====== -->
+    <section class="resume-section animate-on-scroll fade-in">
+      <a href="assets/Alex N. Obwogi_CV.pdf" download class="btn-resume">📄 Download My Resume (PDF)</a>
+    </section>
+
+    <!-- ====== Call to Action ====== -->
+    <section class="cta animate-on-scroll slide-in">
+      <p>Let’s connect — I’d love to collaborate, discuss ideas, or simply say hi! Reach out anytime!</p>
+      <a href="contact.html" class="btn-cta">Contact Me</a>
+    </section>
   </main>
-  <a href="assets/Alex N. Obwogi_CV.pdf" download class="btn-resume">📄 Download My Resume (PDF)</a>
 
-
+  <!-- ====== Footer ====== -->
   <footer>
-    <p>&copy; 2025 Alex Obwogi All rights reserved.</p>
+    <p>&copy; 2025 Alex Obwogi. All rights reserved.</p>
   </footer>
 
   <script src="js/script.js"></script>

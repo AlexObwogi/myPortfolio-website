@@ -3,16 +3,18 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>My Portfolio</title>
+  <title>Alex Obwogi | Portfolio</title>
   <link rel="stylesheet" href="css/style.css" />
   <link rel="stylesheet" href="css/animations.css" />
   <link rel="icon" href="icons/favicon.ico" type="image/x-icon" />
 </head>
 <body>
-  <!-- ====== Navigation Bar ====== -->
+
+  <!-- ====== Header / Navigation ====== -->
   <header>
     <nav class="navbar animate-on-scroll fade-in">
-      <div class="logo">MyPortfolio</div>
+      <div class="logo">Alex Obwogi</div>
+      <div id="mobile-menu-icon" class="menu-icon">☰</div>
       <ul class="nav-links">
         <li><a href="about.html">About</a></li>
         <li><a href="#projects">Projects</a></li>
@@ -24,45 +26,56 @@
   <!-- ====== Hero Section ====== -->
   <section class="hero animate-on-scroll fade-in">
     <div class="hero-content">
-      <h1>Hello, I'm <span class="highlight">Alex Obwogi</span></h1>
-      <p>I build responsive websites & creative experiences.</p>
-      <a href="assets/Alex N. Obwogi_CV.pdf" download class="btn-resume"> Download My Resume (PDF)</a>
+      <h1>Hi, I'm <span class="highlight">Alex Obwogi</span></h1>
+      <p>I craft elegant, responsive websites and engaging digital experiences that don’t just look good—but feel intuitive, perform smoothly, and solve real problems. With a passion for clean design and modern technologies, I bring ideas to life through code, whether it's a sleek personal portfolio, a dynamic web app, or a user-friendly business site.
+
+I'm not just building websites—I’m building experiences that connect, inspire, and convert. Whether you're here to explore my projects, collaborate, or just say hi—welcome, and let's create something exceptional together.</p>
+      <a href="assets/Alex N. Obwogi_CV.pdf" download class="btn-resume">Download My Resume (PDF)</a>
     </div>
     <div class="profile-photo">
-      <img src="images/profile2.png" alt="Alex Obwogi" />
-      <p class="caption">Hi, I'm Alex 👋</p>
+      <img src="images/profile2.png" alt="Alex Obwogi profile photo" />
+      <p class="caption">Nice to meet you — I’m Alex 👋</p>
     </div>
-    
   </section>
 
   <!-- ====== About Section ====== -->
   <section id="about" class="about animate-on-scroll slide-in">
     <h2>About Me</h2>
-    <p>This is a brief intro about who you are, your skills, and your goals.</p>
+    <p>Hi, I’m Alex Obwogi — a passionate web developer focused on creating meaningful digital experiences.
+
+I specialize in building responsive, visually striking websites that not only look good but also provide a seamless user experience. With a strong eye for detail and a love for clean, efficient code, I bring both creativity and technical skill to every project I take on.
+
+Whether it’s developing a personal brand site, a web application, or collaborating on a larger project—I aim to craft solutions that are user-focused, accessible, and scalable. I'm always eager to learn, grow, and contribute to projects that make a difference.
+
+When I’m not coding, you’ll find me exploring new tech trends, refining my skills, or helping others bring their digital visions to life. Let’s connect and build something great together.</p>
   </section>
 
   <!-- ====== Projects Section ====== -->
   <section id="projects" class="projects animate-on-scroll fade-in">
-    <h2>My Projects</h2>
-    <div class="project-card">
-      <img src="images/project1.png" alt="Project 1" />
+    <h2>Selected Projects</h2>
+
+    <div class="project-card project-item javascript">
+      <img src="images/project1.png" alt="Screenshot of Portfolio Project" />
       <div class="project-info">
-        <h3>Project Title</h3>
-        <p>A short description of this project.</p>
-        <a href="projects/project1.html" class="btn btn-secondary">Read More</a>
+        <h3>Personal Portfolio</h3>
+        <p>A sleek and responsive personal website built to showcase my work, skills, and story as a developer.</p>
+        <a href="projects/project1.html" class="btn btn-secondary">Explore Project</a>
       </div>
     </div>
-    <button class="filter-button" data-filter="all">All</button>
-    <button class="filter-button" data-filter="java">Java</button>
-    <button class="filter-button" data-filter="javascript">JavaScript</button>
+
+    <div class="project-filters">
+      <button class="filter-button" data-filter="all">All</button>
+      <button class="filter-button" data-filter="java">Java</button>
+      <button class="filter-button" data-filter="javascript">JavaScript</button>
+    </div>
   </section>
 
   <!-- ====== Contact Section ====== -->
   <section id="contact" class="contact animate-on-scroll slide-in">
-    <h2>Contact Me</h2>
-    <form>
-      <input type="text" placeholder="Your Name" required />
-      <input type="email" placeholder="Your Email" required />
+    <h2>Get in Touch</h2>
+    <form class="contact-form">
+      <input type="text" placeholder="Full Name" required />
+      <input type="email" placeholder="Email Address" required />
       <textarea placeholder="Your Message" rows="5" required></textarea>
       <button type="submit" class="btn btn-primary">Send Message</button>
     </form>
@@ -70,11 +83,10 @@
 
   <!-- ====== Footer ====== -->
   <footer class="animate-on-scroll fade-in">
-    <p>© 2025 Alex Obwogi. All rights reserved.</p>
+    <p>&copy; 2025 Alex Obwogi. All rights reserved.</p>
   </footer>
+  <button id="scroll-to-top" title="Back to Top">↑</button>
 
-  <script src="js/script.js">
-   
-  </script>
+  <script src="js/script.js"></script>
 </body>
 </html>
